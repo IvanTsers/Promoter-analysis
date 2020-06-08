@@ -21,7 +21,10 @@ These scripts are to
 3. Use [RimGubaev's script](https://github.com/RimGubaev/extract_promoters) to extract promoters of your species' genes. Put the file *'Promoters.fa'* into *'Run_MAST'* directory.
 4. Download [PlantPAN_TF_annotation_filtered.tsv](https://mega.nz/file/eW5jEDzD#5y_PfsgiBfrVan8pgtdImu4P8byE0gH4ztkF7CNlXrE), put it into *'MAST_XML_parser'* folder.
 5. Download [PlantPAN_meme_motifs (959 KB)](https://mega.nz/folder/zewBGZoZ#vbgjD8kxT81ah6q6YxV67A), put it into *'Run_MAST'* folder.
-6. Download [PlantPAN_TF_annotation_filtered.tsv](https://mega.nz/file/eW5jEDzD#5y_PfsgiBfrVan8pgtdImu4P8byE0gH4ztkF7CNlXrE), put it into *'MAST_XML_parser'* folder.
+6. Download [PlantPAN_TF_annotation_filtered.tsv](https://mega.nz/file/eW5jEDzD#5y_PfsgiBfrVan8pgtdImu4P8byE0gH4ztkF7CNlXrE), put it into *'Run_MAST'*  folder.
+7. Using bash shell, change current directory to *'Run_MAST'* ($cd full_path_to_folder_created_in_step_1/Run_MAST)
+8. Run *'run_MAST_parallel.sh'* ($bash run_MAST_parallel.bash). The output folder (*'MAST_output'*) will appear in the current directory. Example output: [MAST_output (1.34 GB)](https://mega.nz/folder/OepnWDST#2Pw3pp1t0SdNH2ckBfbWtQ).
+9. Open *'MAST_XML_parser.R'* (is located in *'MAST_XML_parser'*) in R Studio.
 
 **NB: If you're interested in how *PlantPAN_TF_annotation_filtered.tsv* and chunked *PlantPAN_meme_motifs* were produced, you may perform full analysis by yourself:**
 
