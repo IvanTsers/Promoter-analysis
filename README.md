@@ -12,7 +12,7 @@ These scripts are to
 * R packages: data.table, ggplot2, ggpubr, grid, gridExtra, reshape2, XML
 
 ## Instructions
-### If you want to save time and just use PlantPAN3.0 PWMs as the input for MAST, do following steps:**
+### If you want to save time and just use PlantPAN3.0 PWMs as the input for MAST, do following steps:
 
 1. Create an empty folder on your machine (name it 'Promoter-analysis' or whatever you like).
 2. Download *'Run_MAST'*, *'MAST_XML_parser'*, *'TF_family_regulons_correlation_analysis'*, and *'TF_regulons_enrichment_analysis'* folders from this repository and put them into the folder you have created.
