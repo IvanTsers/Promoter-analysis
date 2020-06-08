@@ -56,4 +56,4 @@ Then open *'TF_family_regulons_correlation_analysis.R '* (is located in *'TF_fam
 5. Open *'PlantPAN_annotation_download.R'* (is located in *'PlantPAN_annotation_download'*) in R Studio and run this script. The output file (*'PlantPAN_TF_annotation_filtered.tsv'*) will appear in *'Output'* directory. You may download this file here:  [PlantPAN_TF_annotation_filtered.tsv](https://mega.nz/file/eW5jEDzD#5y_PfsgiBfrVan8pgtdImu4P8byE0gH4ztkF7CNlXrE).
 6. Open *'Preparing_MAST_input.R'* (is located in *'Preparing_MAST_input.R'*) in R Studio and run this script. The output (*'PlantPAN_meme_motifs'* folder) will appear in *'Preparing_MAST_input'* directory. You may download it here:  [PlantPAN_meme_motifs (959 KB)](https://mega.nz/folder/zewBGZoZ#vbgjD8kxT81ah6q6YxV67A).
 7. Move *'PlantPAN_meme_motifs'* into *'Run_MAST'* folder.
-8. To perform further analysis, go to step 7 of the previous section.
+8. To perform further analysis, go to step 8 of the previous section.
