@@ -28,7 +28,7 @@ These scripts are to
 11. **Master-regulators prediction:** put the table contains data on differential gene expression (DGE) into the folder you have created in the step 1. **NB:** the following columns must be in this table: GeneID (text or numeric), log2FC (numeric) (as shown below)
 
 |   GeneID   | log2FC  |
-| ---------- | ------- |
+| :--------: | :-----: |
 | 107809780  |  4.838  |
 | 107760295  | -1.706  |
 
