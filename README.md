@@ -27,9 +27,9 @@ These scripts are to
 10. Open *'Annotate_MAST_output_full.R'* (is located in *'MAST_XML_parser'*) in R Studio and run this script. The output file (*'tf_analysis_input_annotated.tsv'*) will appear in *'MAST_XML_parser'* directory. Example output: [tf_analysis_input_annotated.tsv (104.1 MB)](https://mega.nz/file/LLozGZyR#R0283KJ7J4s6_PmGbRPsPo0l_gDQlWrz5uv8Pi35ESI).
 11. **Master-regulators prediction:** put the table contains data on differential gene expression (DGE) into the folder you have created in the step 1. **NB:** the following columns must be in this table: GeneID (text or numeric), log2FC (numeric) (as shown below)
 
-| GeneID  | log2FC |
-| --- | --- |
-| 107809780  | 4.838  |
+|   GeneID   | log2FC  |
+| ---------- | ------- |
+| 107809780  |  4.838  |
 | 107760295  | -1.706  |
 
 ([example expression table (2 MB)](https://mega.nz/file/GewTWJbL#4mp5yTA-lLanGrGH247M_mLx-7wUEcAKslTrdxaO0u4)). Then open *'TF_regulons_enrichment_analysis.R '* (is located in *'TF_regulons_enrichment_analysis'*) in R Studio and run this script. The output file (*'DEG_enriched_regulons.tsv'*) will appear in *'TF_regulons_enrichment_analysis'* directory. Example output: [DEG_enriched_regulons.tsv (174 B)](https://mega.nz/file/HT4lDRgK#AfNMRrM9biKynge_6ymgact7Tmoik2s9j76ayxhLz7s).
