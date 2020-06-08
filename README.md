@@ -17,7 +17,7 @@ These scripts are to
 2. Download all the folders from this repository into the folder you have created.
 
 ### Example datasets weblinks
- * [Promoters.fa](https://mega.nz/file/CS4RmbxA#eF2pFr8gVK7P05XmTVp6GUJ_Ne27ERF9oT77NRe313w)
- * [MAST_output](https://mega.nz/folder/OepnWDST#2Pw3pp1t0SdNH2ckBfbWtQ)
- * [PlantPAN_meme_motifs](https://mega.nz/folder/zewBGZoZ#vbgjD8kxT81ah6q6YxV67A)
- * [Example_expression_table.tsv](https://mega.nz/file/uOhnAbKY#4mp5yTA-lLanGrGH247M_mLx-7wUEcAKslTrdxaO0u4)
+ * [Promoters.fa (56.3 MB)](https://mega.nz/file/CS4RmbxA#eF2pFr8gVK7P05XmTVp6GUJ_Ne27ERF9oT77NRe313w)
+ * [MAST_output (1.34 GB)](https://mega.nz/folder/OepnWDST#2Pw3pp1t0SdNH2ckBfbWtQ)
+ * [PlantPAN_meme_motifs (959 KB)](https://mega.nz/folder/zewBGZoZ#vbgjD8kxT81ah6q6YxV67A)
+ * [Example_expression_table.tsv (2 MB)](https://mega.nz/file/uOhnAbKY#4mp5yTA-lLanGrGH247M_mLx-7wUEcAKslTrdxaO0u4)
