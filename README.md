@@ -12,7 +12,7 @@ These scripts are to
 * R packages: data.table, ggplot2, ggpubr, grid, gridExtra, reshape2, XML
 
 ## Instructions
-**NB: If you want to save time and just use PlantPAN3.0 PWMs as the input for MAST, do following steps:**
+### If you want to save time and just use PlantPAN3.0 PWMs as the input for MAST, do following steps:**
 
 1. Create an empty folder on your machine (name it 'Promoter-analysis' or whatever you like).
 2. Download *'Run_MAST'*, *'MAST_XML_parser'*, *'TF_family_regulons_correlation_analysis'*, and *'TF_regulons_enrichment_analysis'* folders from this repository and put them into the folder you have created.
@@ -44,7 +44,9 @@ Then open *'TF_regulons_enrichment_analysis.R '* (is located in *'TF_regulons_en
 
 ([example gene expression table 2 (categorized) (2 MB)](https://mega.nz/file/GewTWJbL#4mp5yTA-lLanGrGH247M_mLx-7wUEcAKslTrdxaO0u4)). If you want to use this example, change file's name to *'Expression_table.tsv'*.
 
-**NB: If you're interested in how *PlantPAN_TF_annotation_filtered.tsv* and chunked *PlantPAN_meme_motifs* were produced, you may perform the following steps:**
+Then open *'TF_family_regulons_correlation_analysis.R '* (is located in *'TF_family_regulons_correlation_analysis'*) in R Studio and run this script.The output png files will appear in *'Significant/Non_significant'* directories. Example output: ![Apoptic-like cell death](https://mega.nz/file/jLxTBL6I#UUrS4TvkJFA4gImI612PpKG8aD7iMobIzZ94vt8oE3I)
+
+### If you're interested in how *PlantPAN_TF_annotation_filtered.tsv* and chunked *PlantPAN_meme_motifs* were produced, you may perform the following steps:**
 
 1. Create an empty folder on your machine (name it 'Promoter-analysis' or whatever you like).
 2. Download all the folders from this repository into the folder you have created.
