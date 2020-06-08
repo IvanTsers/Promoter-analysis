@@ -1,4 +1,4 @@
-# Promoter-analysis
+# Promoter-analysis: revealing the potential role of transcription factors in a given physiological process using RNA-Seq data
 These scripts are to 
   1. Search cis-regulatory elements (CREs) within gene promoter regions using position weight matrices (PWMs) obtained from PlantPAN3.0 (http://plantpan.itps.ncku.edu.tw/index.html) and MAST tool from MEME suite (http://meme-suite.org/). However, you can adapt the scripts to work with other databases and motif search tools.
   2. Combine CRE search results with differential gene expression (DGE) analysis to predict the potential master-regulators among plant transcription factors (TFs);
@@ -27,7 +27,8 @@ These scripts are to
 8. Run *'run_MAST_parallel.sh'* ($bash run_MAST_parallel.bash). The output folder (*'MAST_output'*) will appear in the current directory. Example output: [MAST_output (1.34 GB)](https://mega.nz/folder/OepnWDST#2Pw3pp1t0SdNH2ckBfbWtQ).
 9. Open *'MAST_XML_parser.R'* (is located in *'MAST_XML_parser'*) in R Studio and run this script. The output file (*'mast_output_full.tsv'*) will appear in *'MAST_XML_parser'* directory. Example output: [mast_output_full.tsv (81.4 MB)](https://mega.nz/file/LLozGZyR#R0283KJ7J4s6_PmGbRPsPo0l_gDQlWrz5uv8Pi35ESI).
 10. Open *'Annotate_MAST_output_full.R'* (is located in *'MAST_XML_parser'*) in R Studio and run this script. The output file (*'tf_analysis_input_annotated.tsv'*) will appear in *'MAST_XML_parser'* directory. Example output: [tf_analysis_input_annotated.tsv (104.1 MB)](https://mega.nz/file/LLozGZyR#R0283KJ7J4s6_PmGbRPsPo0l_gDQlWrz5uv8Pi35ESI).
-11. 
+11. **Master-regulators prediction:**
+12. **Prediction of TF families responsible for regulation of a certain group of genes:**
 
 **NB: If you're interested in how *PlantPAN_TF_annotation_filtered.tsv* and chunked *PlantPAN_meme_motifs* were produced, you may perform the following steps:**
 
