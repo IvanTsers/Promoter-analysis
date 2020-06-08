@@ -11,3 +11,6 @@
 * Linux OS is recommended (tested on Ubuntu 14.04)
 * MEME suite is to be installed on your system (http://meme-suite.org/)
 * R packages: data.table, ggplot2, ggpubr, grid, gridExtra, reshape2, XML
+
+## Quick start
+Download all the folders from this repository.
