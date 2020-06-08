@@ -44,7 +44,9 @@ Then open *'TF_regulons_enrichment_analysis.R '* (is located in *'TF_regulons_en
 
 ([example gene expression table 2 (categorized) (2 MB)](https://mega.nz/file/GewTWJbL#4mp5yTA-lLanGrGH247M_mLx-7wUEcAKslTrdxaO0u4)). If you want to use this example, change file's name to *'Expression_table.tsv'*.
 
-Then open *'TF_family_regulons_correlation_analysis.R '* (is located in *'TF_family_regulons_correlation_analysis'*) in R Studio and run this script.The output png files will appear in *'Significant/Non_significant'* directories. Example output: ![Apoptic-like cell death](https://github.com/IvanTsers/Promoter-analysis/blob/master/TF_family_regulons_correlation_analysis/Apoptic-like%20cell%20death.png)
+Then open *'TF_family_regulons_correlation_analysis.R '* (is located in *'TF_family_regulons_correlation_analysis'*) in R Studio and run this script.The output png files will appear in *'Significant/Non_significant'* directories. Example output: 
+
+![Apoptic-like cell death](https://github.com/IvanTsers/Promoter-analysis/blob/master/TF_family_regulons_correlation_analysis/Apoptic-like%20cell%20death.png)
 
 ### If you're interested in how *PlantPAN_TF_annotation_filtered.tsv* and chunked *PlantPAN_meme_motifs* were produced, you may perform the following steps:**
 
@@ -52,13 +54,7 @@ Then open *'TF_family_regulons_correlation_analysis.R '* (is located in *'TF_fam
 2. Download all the folders from this repository into the folder you have created.
 3. Download PWMs of TF binding sites (all plants) from [PlantPAN3.0](http://plantpan.itps.ncku.edu.tw/download/home.php). Put the file *'Transcription_factor_weight_matrix.txt'* into into the folder you have created.  [Alternative direct link to Transcription_factor_weight_matrix.txt (1.1 MB)](https://mega.nz/file/SD5HEbwR#0m7Buo6wWJPaxFHsU7qYlRj4UYI4iZCR5fVJzAH8TVk)
 4. Download the ID mapping file (all plants) from [PlantPAN3.0](http://plantpan.itps.ncku.edu.tw/download/home.php). Put the file *'ID_mapping_all_plant.txt'* into into the folder you have created. [Alternative direct link to ID_mapping_all_plant.txt (2.8 MB)](https://mega.nz/file/zbhRiRKC#z9KUmrPrsJmxkAyZhvaZ2JDO5rMO-70mG0a8AotnGvk)
-5. Use [RimGubaev's script](https://github.com/RimGubaev/extract_promoters) to extract promoters of your species' genes. Put the file *'Promoters.fa'* into *'Run_MAST'* directory.
-6. Using bash shell, change current directory to *'Run_MAST'* ($cd full_path_to_folder_created_in_step_1/Run_MAST)
-7. Run *'run_MAST_parallel.sh'* ($bash run_MAST_parallel.bash). The output folder (*'MAST_output'*) will appear in the current directory. Example output: [MAST_output (1.34 GB)](https://mega.nz/folder/OepnWDST#2Pw3pp1t0SdNH2ckBfbWtQ).
-. To perform further analysis, go to step 7 of the previous section.
-
-## Example datasets weblinks
- * [Promoters.fa (56.3 MB)](https://mega.nz/file/CS4RmbxA#eF2pFr8gVK7P05XmTVp6GUJ_Ne27ERF9oT77NRe313w)
- * [MAST_output (1.34 GB)](https://mega.nz/folder/OepnWDST#2Pw3pp1t0SdNH2ckBfbWtQ)
- * [PlantPAN_meme_motifs (959 KB)](https://mega.nz/folder/zewBGZoZ#vbgjD8kxT81ah6q6YxV67A)
- * [Example_expression_table.tsv (2 MB)](https://mega.nz/file/uOhnAbKY#4mp5yTA-lLanGrGH247M_mLx-7wUEcAKslTrdxaO0u4)
+5. Open *'PlantPAN_annotation_download.R'* (is located in *'PlantPAN_annotation_download'*) in R Studio and run this script. The output file (*'PlantPAN_TF_annotation_filtered.tsv'*) will appear in *'Output'* directory. You may download this file here:  [PlantPAN_TF_annotation_filtered.tsv](https://mega.nz/file/eW5jEDzD#5y_PfsgiBfrVan8pgtdImu4P8byE0gH4ztkF7CNlXrE).
+6. Open *'Preparing_MAST_input.R'* (is located in *'Preparing_MAST_input.R'*) in R Studio and run this script. The output (*'PlantPAN_meme_motifs'* folder) will appear in *'Preparing_MAST_input'* directory. You may download it here:  [PlantPAN_meme_motifs (959 KB)](https://mega.nz/folder/zewBGZoZ#vbgjD8kxT81ah6q6YxV67A).
+7. Move *'PlantPAN_meme_motifs'* into *'Run_MAST'* folder.
+8. To perform further analysis, go to step 7 of the previous section.
