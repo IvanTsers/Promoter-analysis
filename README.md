@@ -3,8 +3,6 @@ These scripts are to
   1. Search cis-regulatory elements (CREs) within gene promoter regions using position weight matrices (PWMs) obtained from PlantPAN3.0 (http://plantpan.itps.ncku.edu.tw/index.html) and MAST tool from MEME suite (http://meme-suite.org/). However, you can adapt the scripts to work with other databases and motif search tools.
   2. Combine CRE search results with differential gene expression (DGE) analysis to predict the potential master-regulators among plant transcription factors (TFs);
   3. Infer certain potential TF families responsible for the differential regulation of genes belonging to the particular multigene families within which both up- and downregulated genes were well-represented.
-  
-**NB**: The extraction of gene promoter regions were performed using extract_promoters.sh shell script (https://github.com/RimGubaev/extract_promoters). You can download promoter regions of Nicotiana tabacum genes to use them as an example input for *run_MAST_parallel.bash*
 
 ## System requirements:
 * Multi-core CPU (for parallel computations)
@@ -27,7 +25,14 @@ These scripts are to
 8. Run *'run_MAST_parallel.sh'* ($bash run_MAST_parallel.bash). The output folder (*'MAST_output'*) will appear in the current directory. Example output: [MAST_output (1.34 GB)](https://mega.nz/folder/OepnWDST#2Pw3pp1t0SdNH2ckBfbWtQ).
 9. Open *'MAST_XML_parser.R'* (is located in *'MAST_XML_parser'*) in R Studio and run this script. The output file (*'mast_output_full.tsv'*) will appear in *'MAST_XML_parser'* directory. Example output: [mast_output_full.tsv (81.4 MB)](https://mega.nz/file/LLozGZyR#R0283KJ7J4s6_PmGbRPsPo0l_gDQlWrz5uv8Pi35ESI).
 10. Open *'Annotate_MAST_output_full.R'* (is located in *'MAST_XML_parser'*) in R Studio and run this script. The output file (*'tf_analysis_input_annotated.tsv'*) will appear in *'MAST_XML_parser'* directory. Example output: [tf_analysis_input_annotated.tsv (104.1 MB)](https://mega.nz/file/LLozGZyR#R0283KJ7J4s6_PmGbRPsPo0l_gDQlWrz5uv8Pi35ESI).
-11. **Master-regulators prediction:**
+11. **Master-regulators prediction:** put the table contains data on differential gene expression (DGE) into the folder you have created in the step 1. **NB:** the following columns must be in this table: GeneID (text or numeric), log2FC (numeric) (as shown below)
+
+| GeneID  | log2FC |
+| --- | --- |
+| 107809780  | 4.838  |
+| 107760295  | -1.706  |
+
+([example expression table (2 MB)](https://mega.nz/file/GewTWJbL#4mp5yTA-lLanGrGH247M_mLx-7wUEcAKslTrdxaO0u4)). Then open *'TF_regulons_enrichment_analysis.R '* (is located in *'TF_regulons_enrichment_analysis'*) in R Studio and run this script. The output file (*'DEG_enriched_regulons.tsv'*) will appear in *'TF_regulons_enrichment_analysis'* directory. Example output: [DEG_enriched_regulons.tsv (174 B)](https://mega.nz/file/HT4lDRgK#AfNMRrM9biKynge_6ymgact7Tmoik2s9j76ayxhLz7s).
 12. **Prediction of TF families responsible for regulation of a certain group of genes:**
 
 **NB: If you're interested in how *PlantPAN_TF_annotation_filtered.tsv* and chunked *PlantPAN_meme_motifs* were produced, you may perform the following steps:**
