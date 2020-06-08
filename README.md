@@ -31,6 +31,7 @@ These scripts are to
 | ---------- | ------- |
 | 107809780  |  4.838  |
 | 107760295  | -1.706  |
+
 ([example gene expression table 1 (2 MB)](https://mega.nz/file/OHwzSJZa#-2Lp8102nKo7tDZtloQitfpPbqH-X5Yp4LCPK93Lw9A)). If you want to use this example, change file's name to *'Expression_table.tsv'*.
 
 Then open *'TF_regulons_enrichment_analysis.R '* (is located in *'TF_regulons_enrichment_analysis'*) in R Studio and run this script. The output file (*'DEG_enriched_regulons.tsv'*) will appear in *'TF_regulons_enrichment_analysis'* directory. Example output: [DEG_enriched_regulons.tsv (174 B)](https://mega.nz/file/HT4lDRgK#AfNMRrM9biKynge_6ymgact7Tmoik2s9j76ayxhLz7s).
@@ -40,6 +41,7 @@ Then open *'TF_regulons_enrichment_analysis.R '* (is located in *'TF_regulons_en
 | ---------- | --------------------- | ------ |
 | 107791722  | Zinc finger proteins  | -9.473 |
 | 107814985  |       Aquaporins      |  5.173 |
+
 ([example gene expression table 2 (categorized) (2 MB)](https://mega.nz/file/GewTWJbL#4mp5yTA-lLanGrGH247M_mLx-7wUEcAKslTrdxaO0u4)). If you want to use this example, change file's name to *'Expression_table.tsv'*.
 
 **NB: If you're interested in how *PlantPAN_TF_annotation_filtered.tsv* and chunked *PlantPAN_meme_motifs* were produced, you may perform the following steps:**
