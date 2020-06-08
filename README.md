@@ -44,7 +44,7 @@ Then open *'TF_regulons_enrichment_analysis.R '* (is located in *'TF_regulons_en
 
 ([example gene expression table 2 (categorized) (2 MB)](https://mega.nz/file/GewTWJbL#4mp5yTA-lLanGrGH247M_mLx-7wUEcAKslTrdxaO0u4)). If you want to use this example, change file's name to *'Expression_table.tsv'*.
 
-Then open *'TF_family_regulons_correlation_analysis.R '* (is located in *'TF_family_regulons_correlation_analysis'*) in R Studio and run this script.The output png files will appear in *'Significant/Non_significant'* directories. Example output: ![Apoptic-like cell death](https://mega.nz/file/jLxTBL6I#UUrS4TvkJFA4gImI612PpKG8aD7iMobIzZ94vt8oE3I)
+Then open *'TF_family_regulons_correlation_analysis.R '* (is located in *'TF_family_regulons_correlation_analysis'*) in R Studio and run this script.The output png files will appear in *'Significant/Non_significant'* directories. Example output: ![Apoptic-like cell death](https://github.com/IvanTsers/Promoter-analysis/blob/master/TF_family_regulons_correlation_analysis/Apoptic-like%20cell%20death.png)
 
 ### If you're interested in how *PlantPAN_TF_annotation_filtered.tsv* and chunked *PlantPAN_meme_motifs* were produced, you may perform the following steps:**
 
