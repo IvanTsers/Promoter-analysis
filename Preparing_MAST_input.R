@@ -1,15 +1,15 @@
-# WARNING: you need jaspar2meme (the tool from MEME suite) to be installed in your system.
+# WARNING: you need jaspar2meme (the tool from MEME suite) to be installed on your system.
 # MEME Suite installation: http://meme-suite.org/doc/install.html?man_type=web
 
-# The downloadable PlantPAN 3.0 position weight matrices (PWMs, hereinafter referred to as matrices) lacks of uniform format. 
+# The downloadable PlantPAN 3.0 position weight matrices (PWMs, hereinafter referred to as matrices) apparently lacks of uniform format. 
 # Instead, they are medley of position weights and position probabilities in JASPAR-like format.
 # Moreover, there are diffrent fractional number formats:
 #   1) no fixed number of digits after point;
 #   2) exponential format in some positions;
 #   3) matrices of integers are mixed with fractions.
-# This table is to be formatted into .MEME via jaspar2meme tool,
+# Transcription_factor_weight_matrix.txt is to be formatted into .MEME via jaspar2meme tool,
 # and we are to edit PlantPAN 3.0 matrices just to create an input for this tool.
-# Only after such formatting the matrices may be loaded in MAST.
+# Only after such formatting one can load the matrices in MAST.
 
 options(stringsAsFactors = F)
 
@@ -29,8 +29,8 @@ file_sorter <- function(X, d){
 # Set working directory into the source file location automatically (NB: the source file must be opened in RStudio!)
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) 
 
-# Get downloaded PlantPAN3.0 database (PP = "PlantPan")
-PP_matrix <- readLines('Transcription_factor_weight_matrix.txt')
+# Get downloaded PlantPAN3.0 database (PP stands for "PlantPan")
+PP_matrix <- readLines('../Transcription_factor_weight_matrix.txt')
 
 ########################
 #                      #
@@ -64,7 +64,7 @@ rm(PP_Es)
 
 ###########################
 #                         #
-# CONVERTING THE MATRICES #
+#  CONVERT THE MATRICES   #
 #                         #
 ###########################
 
@@ -91,8 +91,8 @@ rm(fileConn, header, i, matr)
 
 # Delete all the files containing PWMs of poorly annotated TFs
 
-PlantPAN_annot_filtered <- read.csv('../PlantPAN_TF_annotation_filtered.tsv', sep = '\t')
-ids <- read.csv('../ID_mapping_all_plant.txt', sep = '\t')
+PlantPAN_annot_filtered <- read.csv('../../PlantPAN_annotation_download/Output/PlantPAN_TF_annotation_filtered.tsv', sep = '\t')
+ids <- read.csv('../../ID_mapping_all_plant.txt', sep = '\t')
 
 colnames(ids)[2] <- 'TF_Gene_ID'
 ids <- ids[ids$TF_Gene_ID %in% PlantPAN_annot_filtered$TF_Gene_ID, ]
@@ -128,10 +128,12 @@ system(paste('jaspar2meme  -pfm ',
              './part_', k, 
              ' > ../PlantPAN_meme_motifs/PlantPAN_part_', k, '.meme',
              sep = ''))
-
-system(paste("sed -i 's/,/./g' ../PlantPAN_meme_motifs/PlantPAN_part_", k, ".meme", sep = ''))
 }
+
+system(paste("sed -i 's/,/./g' ./PlantPAN_meme_motifs/*.meme", sep = ''))
 
 # Delete the big folder 'Separated_matrices'
 setwd('../')
 unlink('Separated_matrices/', recursive = T)
+
+# Now one should move 'PlantPAN_meme_motifs' folder into the same directory as 'run_MAST_parallel.sh'
