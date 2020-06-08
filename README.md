@@ -33,8 +33,8 @@ These scripts are to
 
 1. Create an empty folder on your machine (name it 'Promoter-analysis' or whatever you like).
 2. Download all the folders from this repository into the folder you have created.
-3. Download PWMs of TF binding sites (all plants) from [PlantPAN3.0](http://plantpan.itps.ncku.edu.tw/download/home.php). Put the file *'Transcription_factor_weight_matrix.txt'* into into the folder you have created.
-4. Download the ID mapping file (all plants) from [PlantPAN3.0](http://plantpan.itps.ncku.edu.tw/download/home.php). Put the file *'ID_mapping_all_plant.txt'* into into the folder you have created.
+3. Download PWMs of TF binding sites (all plants) from [PlantPAN3.0](http://plantpan.itps.ncku.edu.tw/download/home.php). Put the file *'Transcription_factor_weight_matrix.txt'* into into the folder you have created.  [Alternative direct link to Transcription_factor_weight_matrix.txt (1.1 MB)](https://mega.nz/file/SD5HEbwR#0m7Buo6wWJPaxFHsU7qYlRj4UYI4iZCR5fVJzAH8TVk)
+4. Download the ID mapping file (all plants) from [PlantPAN3.0](http://plantpan.itps.ncku.edu.tw/download/home.php). Put the file *'ID_mapping_all_plant.txt'* into into the folder you have created. [Alternative direct link to ID_mapping_all_plant.txt (2.8 MB)](https://mega.nz/file/zbhRiRKC#z9KUmrPrsJmxkAyZhvaZ2JDO5rMO-70mG0a8AotnGvk)
 5. Use [RimGubaev's script](https://github.com/RimGubaev/extract_promoters) to extract promoters of your species' genes. Put the file *'Promoters.fa'* into *'Run_MAST'* directory.
 6. Using bash shell, change current directory to *'Run_MAST'* ($cd full_path_to_folder_created_in_step_1/Run_MAST)
 7. Run *'run_MAST_parallel.sh'* ($bash run_MAST_parallel.bash). The output folder (*'MAST_output'*) will appear in the current directory. Example output: [MAST_output (1.34 GB)](https://mega.nz/folder/OepnWDST#2Pw3pp1t0SdNH2ckBfbWtQ).
