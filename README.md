@@ -46,7 +46,7 @@ Then open *'TF_regulons_enrichment_analysis.R '* (is located in *'TF_regulons_en
 
 Then open *'TF_family_regulons_correlation_analysis.R '* (is located in *'TF_family_regulons_correlation_analysis'*) in R Studio and run this script.The output png files will appear in *'Significant/Non_significant'* directories. Example output: 
 
-![Apoptic-like cell death](https://github.com/IvanTsers/Promoter-analysis/blob/master/TF_family_regulons_correlation_analysis/Apoptic-like%20cell%20death.png)
+![Expansins](https://github.com/IvanTsers/Promoter-analysis/blob/master/TF_family_regulons_correlation_analysis/Expansins.png)
 
 ### If you're interested in how *PlantPAN_TF_annotation_filtered.tsv* and chunked *PlantPAN_meme_motifs* were produced, you may perform the following steps:**
 
