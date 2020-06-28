@@ -33,7 +33,7 @@ enriched_regulons <- foreach(i = 1:length(TF_list), .combine = 'rbind') %dopar%
   
   x <- sum(predicted_regulon$DEG) # the number of DEGs in the given regulon
   m <- sum(predicted_regulon$DEG) + sum(predicted_regulon$nonDEG) # total genes in the given regulon
-  n <- sum(subset(input_table, input_table$TF_name != TF_list[i])[, 12:13])
+  n <- sum(subset(input_table, input_table$TF_name != TF_list[i])[, grepl('^DEG$|^nonDEG$', colnames(input_table))])
   pval <- round(phyper(x-1, m, n, k, lower.tail = F), digits = 3)
   df = data.frame(TF_name = TF_list[i], Total_DEG = x,
                   Total_nonDEG = sum(predicted_regulon$nonDEG), P_value = pval)
