@@ -25,20 +25,20 @@ input_table$DEG <- ifelse(!is.na(input_table$log2FC), 1, 0)
 TF_list <- unique(input_table$TF_name)
 TF_list <- TF_list[!is.na(TF_list)]
 
-m <- sum(input_table$DEG)
-n <- sum(input_table$nonDEG)
+k <- sum(input_table$DEG)
 
 enriched_regulons <- foreach(i = 1:length(TF_list), .combine = 'rbind') %dopar%
-  {
-    predicted_regulon <- subset(input_table, input_table$TF_name == TF_list[i])
-
-    x <- sum(predicted_regulon$DEG) # the number of DEGs in the given regulon
-    k <- sum(predicted_regulon$DEG) + sum(predicted_regulon$nonDEG) # total genes in the given regulon
-    pval <- round(phyper(x-1, m, n, k, lower.tail = F), digits = 3)
-    df = data.frame(TF_name = TF_list[i], Total_DEG = x,
-                    Total_nonDEG = sum(predicted_regulon$nonDEG), P_value = pval)
-    df
-  }
+{
+  predicted_regulon <- subset(input_table, input_table$TF_name == TF_list[i])
+  
+  x <- sum(predicted_regulon$DEG) # the number of DEGs in the given regulon
+  m <- sum(predicted_regulon$DEG) + sum(predicted_regulon$nonDEG) # total genes in the given regulon
+  n <- sum(subset(input_table, input_table$TF_name != TF_list[i])[, 12:13])
+  pval <- round(phyper(x-1, m, n, k, lower.tail = F), digits = 3)
+  df = data.frame(TF_name = TF_list[i], Total_DEG = x,
+                  Total_nonDEG = sum(predicted_regulon$nonDEG), P_value = pval)
+  df
+}
 
 enriched_regulons$FDR <- p.adjust(enriched_regulons$P_value, method = 'BH')
 enriched_regulons <- enriched_regulons[enriched_regulons$FDR < 0.05, ]
