@@ -1,5 +1,6 @@
 # Promoter-analysis: revealing the potential role of transcription factors in a given physiological process using RNA-Seq data
-These scripts are to 
+These scripts was used for research published at https://www.mdpi.com/2223-7747/9/9/1176/htm to:
+
   1. Search cis-regulatory elements (CREs) within gene promoter regions using position weight matrices (PWMs) obtained from PlantPAN3.0 (http://plantpan.itps.ncku.edu.tw/index.html) and MAST tool from MEME suite (http://meme-suite.org/). However, you can adapt the scripts to work with other databases and motif search tools.
   2. Combine CRE search results with differential gene expression (DGE) analysis to predict the potential master-regulators among plant transcription factors (TFs);
   3. Infer certain potential TF families responsible for the differential regulation of genes belonging to the particular multigene families within which both up- and downregulated genes were well-represented.
